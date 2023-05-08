@@ -166,13 +166,13 @@ public class ifStatement {
     	 //그 이하는 F
         //중첩 IF 사용
 		public static void method7() {
-			System.out.println("점수를 입력하시오");
+			System.out.println("");
 		
 			int score=sc.nextInt();
 			
 			String grade="";
 			
-			if (score >=90 ) {
+			if (score >=90 && score<=99 ) {
 				grade= "A";	
 			}if(score <= 99 && score>=97) {
 			     grade =grade+"+";	
@@ -180,8 +180,8 @@ public class ifStatement {
 				grade =grade+"0";		
 	        }else if (score <= 92 && score>=90) {
 				grade =grade+"-";		
-			}
-			if (score >=80 ) {
+			
+	        }if (score >=80 && score<=89) {
 				grade= "B";	
 			}if(score <= 89 && score>=87) {
 			     grade =grade+"+";	
@@ -189,8 +189,8 @@ public class ifStatement {
 				grade =grade+"0";		
 	        }else if (score <= 82 && score>=80) {
 				grade =grade+"-";
-	        }
-			if (score >=70 ) {
+	        
+	        }if (score >=70 && score<=79 ) {
 				grade= "C";	
 			}if(score <= 79 && score>=77) {
 			     grade =grade+"+";	
@@ -198,13 +198,21 @@ public class ifStatement {
 				grade =grade+"0";		
 	        }if (score <= 72 && score>=70) {
 				grade =grade+"-";
+	       
 	        }else if (score <= 70) {
 				grade =grade+"C";
 	        }	
 			System.out.println("점수는"+grade+"입니다");
 		}
+		
+		public static void method8() {
+			String message="";
+			System.out.println("");
+			String vlaue=sc.nextLine();
+			
+		   
 		}
-
+}
       
 		
 			
