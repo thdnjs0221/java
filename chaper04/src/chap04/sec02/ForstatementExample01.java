@@ -77,6 +77,9 @@ class ForStatement{
     		 System.out.println("1부터 "+rnd+ "까지의 합 = "+sum);
     	 }
     	 
+     class Forstatement03{
+    	 
+     }
     	 
 		
 		
