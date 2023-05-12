@@ -6,8 +6,8 @@ public class WhileStatementExample {
 
 	public static void main(String[] args) {
 		WhileStatement ws=new WhileStatement();
-		//ws.method1();
-		ws.method2();
+		ws.method1();
+		//ws.method2();
 
 	}
 
