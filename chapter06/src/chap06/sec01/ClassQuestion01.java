@@ -15,8 +15,9 @@ public class ClassQuestion01 {
 			public static void main(String[] args) {
 				ClassGrade gr=new ClassGrade();
 				gr.classGrade();
-				int s=gr.sum();				//return 값을 s변수에 넣기
-				gr.average(s);
+				System.out.println("총점 : "+gr.sum());			//return 값을 s변수에 넣기
+				int s=gr.sum();
+				System.out.println("평균 : "+gr.average(s));
 			}
 		}
 
@@ -39,13 +40,12 @@ public class ClassQuestion01 {
 				for(int i=0; i<score.length; i++) {
 					sum+=score[i];
 				}
-				System.out.println("총점 : "+sum);
 				return sum;
 				}
 			
-			public void average(int s) {		//s값을 가져와 계산하기
+			public int average(int s) {		//s값을 가져와 계산하기
 				int average=(int)(s/score.length);
-				System.out.println("평균 : "+average);
+				return average;
 			}
 
 		}
