@@ -23,9 +23,13 @@ public int withdraw(int amount) {		  //출금할 액수
 	}else {
 		balance-=amount;                   //
 	}
-	public 
 	return amount;						 //if문 마지막에 하나 return?
     }
-
-
+public int getBalance() {
+	return balance;
+	
+}
+public String getAccountOwner() {
+	return accountOwner;
+}
 }
