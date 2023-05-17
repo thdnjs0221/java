@@ -3,12 +3,17 @@ package chap06.sec01;
 public class EmployeesExample {
 
 	public static void main(String[] args) {
+		Employees emp1= new Employees();
+		emp1.empId=1001;
+		emp1.empName="강감찬";
+		emp1.telNum="010-1234-5678";
 		
-		Employees employees=new Employees();
+		emp1.showEmpInfo();
 		
-		System.out.print("사원번호 :"+employees.employeesId+"\n사원명: "+employees.employeesName+"\n전화번호: "+employees.employeesNum);
 		
-
+		
+		
+		
 		
 	}
 
