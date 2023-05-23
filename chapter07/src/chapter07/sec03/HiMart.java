@@ -17,6 +17,6 @@ public class HiMart {
 		//System.out.println("³²Àºµ·: "+b.money);
 			
 			
-	}
+	}      
 
 }
