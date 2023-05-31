@@ -16,11 +16,45 @@
 // (8) int size():ArrayList에 존재하는 객체의 수 반환
 package chap11.sec02;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class ArrayListExamle01 {
 
 	public static void main(String[] args) {
+		ArrayList list=new ArrayList();
+		Person p1=new Person("이성계");
 		
-
+		list.add("홍길동");
+		list.add(100);    // int class 객체로 자동형변환(auto boxing)
+		list.add(false);  //  boolean class 자동형변환
+		list.add(p1);
+		list.add(new Person("정몽주"));
+		
+		System.out.println(list);
+		System.out.println("[일반 for문]");
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		System.out.println("[기능이 향상된 for문]");
+		for (Object obj:list) {				//배열,List 사용 가능(map x)
+			System.out.println(obj);
+		}
+		System.out.println("[반복자(Iterartor) 사용]");
+		Iterator iter=list.iterator();
+		while(iter.hasNext()) { 			//다음 자료가 있는지
+			System.out.println(iter.next());
+		}
 	}
-
+}
+class Person {
+	String name;
+	
+	Person(String name){
+		this.name=name;
+	}
+	@Override
+	public String toString() {
+		return name;
+	}
 }
