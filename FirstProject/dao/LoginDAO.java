@@ -13,19 +13,23 @@ public class LoginDAO {
 		if(instance==null)instance=new LoginDAO();
 		return instance;
 	}
+	
 	JDBCUtil jdbc=JDBCUtil.getInstance();
 	
 	public Map<String, Object> login(String id, String pass){
-		String sql="select *from tbl_member where mem_id=?";
-		sql=sql+" and mem_pass = ? ";
+		String sql="SELECT * FROM TBL_MEMBER WHERE MEM_ID = ? ";
+		sql=sql+" AND MEM_PASS = ? ";
 		List<Object> param=new ArrayList<Object>();
 		param.add(id);
 		param.add(pass);
 		
-		return jdbc.selectOne(sql,param);
-		
-		
-		
+		return jdbc.selectOne(sql, param);
 	}
-
+	
+	public Map<String, Object> select(String id){
+		String sql="SELECT * FROM TBL_MEMBER WHERE MEM_ID = ? ";
+		List<Object> param=new ArrayList<Object>();
+		param.add(id);		
+		return jdbc.selectOne(sql, param);
+	}
 }
